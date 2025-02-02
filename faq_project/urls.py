@@ -28,4 +28,5 @@ urlpatterns = [
     path('', lambda request: redirect('/admin/')),  # Redirect root to admin page
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
+    path('faqs/', views.faq_list, name='faq_list'),  # URL for FA
 ]

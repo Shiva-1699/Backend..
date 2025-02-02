@@ -80,6 +80,10 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
         "NAME": BASE_DIR / "db.sqlite3",
+        'USER': 'faquser',
+        'PASSWORD': 'faqpwd',
+        'HOST': 'db',  # Docker service name
+        'PORT': '5432',
     }
 }
 
@@ -124,3 +128,19 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+# settings.py
+
+# Optional: Define a custom CKEditor toolbar configuration
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': [
+            ['Bold', 'Italic', 'Underline', '-', 'Link', 'Unlink', '-', 'Undo', 'Redo'],
+            ['Format', 'Font', 'FontSize'],
+            ['TextColor', 'BGColor'],
+            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent'],
+        ],
+    },
+}
+
+# If you want to allow uploads, you may want to specify a directory to store images
+CKEDITOR_UPLOAD_PATH = "uploads/"
