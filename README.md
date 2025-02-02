@@ -8,7 +8,7 @@ This project implements a multilingual FAQ system using Django. The system inclu
 - **WYSIWYG Editor**: A user-friendly editor to create and manage FAQ content.
 - **REST APIs**: Endpoints for CRUD operations on FAQs.
 - **Caching**: Redis caching for performance optimization.
-- **Dockerized**: The project is containerized with Docker for easy deployment.
+
 
 
 ## Setup Instructions
